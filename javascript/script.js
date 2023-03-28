@@ -7,6 +7,7 @@ var supino = document.getElementById('supino');
 var themes = 'lighttheme';
 logo.setAttribute('src', `./images/logo_lighttheme.png`);
 fundo.style.backgroundImage = `url(./images/fundo_lighttheme.jpg)`;
+
 //função para alterar o tema
 toggleTheme.onclick = function(){
     
@@ -45,7 +46,7 @@ if(tema != null)
         document.body.classList.toggle('darktheme')
         logo.setAttribute('src', `./images/logo_${tema}.png`)
         fundo.style.backgroundImage = `url(./images/fundo_${tema}.jpg)`
-        supino.setAttribute('src', `./images/supino_${themes}.png`) 
+        
         console.log('certo')
         themes = tema
     }
@@ -55,7 +56,8 @@ if(tema != null)
 links.forEach((link) => {
     link.addEventListener('click', (e) => {
         url = e.target.innerHTML;
-        if(url == 'Home')
+        console.log(url)
+        if(url == 'HOME')
         {
             window.location = `${url}.html?tema=${themes}`
         }
@@ -71,7 +73,6 @@ links.forEach((link) => {
 if(supino != null){
     console.log(supino.value)
     var interval = window.setInterval(function(){
-        console.log(supino.value)
         if(supino.value == undefined){
             supino.setAttribute('src', `./images/supino2_${themes}.png`)
             supino.value = 1

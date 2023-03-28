@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calcular IMC</title>
+</head>
+<body>
+    
+    <nav>
+        <img id="logo" src="" alt="">
+        <ul>
+            <li class="link">HOME</li>
+            <li class="link">IMC</li>
+            <li class="link">PLANOS</li>
+            <li class="link">SOBRE</li>
+            <li class="link">CONTATO</li>
+            <button id="toggle-theme">Light Theme</button>
+        </ul>
+        <button id="login" class="link">LOGIN</button>
+    </nav>
+    <section id="page">
+        <div class="imc">
+            <h2>CALCULAR IMC</h2>
+            <form class="form_imc" onsubmit="return false;">
+                <span>
+                    Peso <br>
+                    <input type="number" id="peso" maxlength="3" step="0.01">
+                </span>
+                <span>
+                    Altura <br>
+                    <input type="number" id="altura" maxlength="3" step="0.01">
+                </span>
+                <button type="submit" onclick="calcularImc()">CALCULAR</button>
+                <input type="text" id="result" disabled value="RESULTADO">
+            </form>
+            <img src="./images/imcimage.png" alt="">
+        </div>
+    </section>
+</body>
+<script src="./javascript/script.js"></script>
+<script src="./javascript/imc.js"></script>
+</html>
