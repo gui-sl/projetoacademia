@@ -1,0 +1,191 @@
+:root{
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(0, 0, 0);
+}
+    
+.darktheme{
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(255, 255, 255);
+}
+    
+#valor-mobile, #close, #show-mobile{
+    display: none;
+}
+
+#page-planos{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    color: var(--secondary-color);
+}
+
+#planos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    bottom: 0;
+    gap: 10px;
+    width: 95%;
+    margin: 20px 0;
+}
+
+#card-plano{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 23%;
+    height: 500px;
+    border-radius: 15px;
+    border: 3px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    gap: 10px;
+    min-width: 300px;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    font-size: 20px;
+    font-weight: bold;    
+    color: #111;
+    border-radius: 10px 10px 0 0;
+}
+
+#title-plano{
+    margin-top: 100px;
+}
+
+.basico{
+    background-color: #e2e2e2;
+}
+
+.essencial{
+    background-color: #9e9e9e;
+}
+
+.extra{
+    background-color: gold;
+}
+
+.premium{
+    background-color: #cbfaf8;
+}
+
+.beneficio{
+    margin-bottom: 10px;
+}
+
+.beneficio, .beneficios{
+    margin-left: 4%;
+}
+
+#valor{
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    word-wrap: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#valor > p{
+    font-size: 15px;
+}
+
+#beneficios{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+@media (max-width: 450px) {
+    #page-planos{
+        justify-content: flex-start;
+    }
+    #card-plano{
+        width: 95%;
+        height: 90px;
+        min-width: 10px;
+        overflow-y: hidden;
+        overflow-x: none;
+        transition: ease .3s;
+    }
+    #beneficios{
+        width: 100%;
+        height: 200px;
+        display: none;
+    }
+    .beneficio, #beneficio, #valor{
+        display: none;
+    }
+    #card-plano:hover{
+        height: 450px;
+    }
+
+    #card-plano:hover > #beneficios{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px    
+    }
+    #card-plano:hover > .beneficio{
+        display: block;
+    }
+
+    #card-plano:hover > #close{
+        display: block;
+        width: 94%;
+        height: 25px;
+        margin-left: 3%;
+        margin-top: 60px;
+        font-size: 15px;
+        border: none;
+        font-weight: bold;
+        color: var(--secondary-color);
+        background-color: transparent;
+    }
+    .head{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 85px;
+        border-radius: 13px;
+    }
+    
+    .basico, .essencial, .extra, .premium{
+        padding: 3%;
+        font-size: 17px;
+    }
+    #valor-mobile, #show-mobile{
+        display: flex;
+        font-size: 20px;
+    }
+    #show-mobile{
+        background-color: transparent;
+        color: #111;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 13px;
+    }
+}
+

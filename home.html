@@ -4,31 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>HOME</title>
 </head>
 <body>
-    
-    <nav>
-        <img id="logo" src="" alt="">
-        <ul>
+<header>
+    <nav id="nav">
+        <img src="./images/logo_lighttheme.png" id="logo" alt="">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
             <li class="link">HOME</li>
             <li class="link">IMC</li>
             <li class="link">PLANOS</li>
             <li class="link">SOBRE</li>
             <li class="link">CONTATO</li>
-            <button id="toggle-theme">Light Theme</button>
+            <input type="checkbox" id="switch" /><label for="switch"></label>
+            <button id="login" class="mob link">LOGIN</button>
         </ul>
-        <button id="login" class="link">LOGIN</button>
+        <button id="login" class="desk link">LOGIN</button>
     </nav>
-    <section id="page">
-        <h1>ATLAS ACADEMY, <br> A ACADEMIA <br> COM PLANOS <br> DO SEU TAMANHO. <br>
-        <button id="more">DESCOBRIR MAIS</button>
-        </h1>
-        <img id="fit" src="./images/fit.png" alt="fit">
-    </section>
+</header>
+<section id="page">
+  <div id="home">
+    <h1 id="title-home">
+      ATLAS ACADEMY, <br> A ACADEMIA <br> COM PLANOS <br> DO SEU TAMANHO. <br>
+      <button id="more" class="link">DESCOBRIR MAIS</button>
+    </h1>
+    <img src="./images/fit.png" class="fit" alt="fit">
+  </div>
+</section>
+
+<section id="page9">
+  <div class="contato">
+      <h5>Entre em Contato</h5> 
+      <span><strong>Telefone</strong> <br> 11 4561-2223</span>
+      <br> <br>
+      <span><strong>Email</strong> <br>atlasacademy@gmail.com</span>
+      <br> <br>
+      <span><strong>Whatsapp</strong> <br> 11 98819-3371</span>
+  </div>
+  <div class="contato">
+      <h5>Midias Sociais</h5>
+      <a href="" class="fa fa-facebook" target="_blank"> &nbsp; Atlas Academy</a> <br>
+      <a href="" class="fa fa-instagram" target="_blank"> &nbsp; atlas_academy</a> <br>
+      <a href="" class="fa fa-twitter" target="_blank"> &nbsp; atlas_academy</a> <br>
+      <a href="" class="fa fa-whatsapp" target="_blank"> &nbsp;11 98819-3371</a>
+  </div>
+  <div class="contato">
+      <h5>Local</h5>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.209305375112!2d-46.65968273022461!3d-23.566564099999983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b88451a681%3A0xe7a211eccd7317e8!2sAv.%20Paulista%2C%20807%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001311-100!5e0!3m2!1spt-BR!2sbr!4v1670288096107!5m2!1spt-BR!2sbr"  width="300" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<footer>
+  <h6>&copy; &nbsp;2022 Todos direitos reservados</h6>
+  <h6>Developed by <a href="">G&G</a> </h6>
+</footer>
+
+<script src="./javascript/nav.js"></script>
 </body>
-<script src="./javascript/script.js">
-    
-</script>
 </html>

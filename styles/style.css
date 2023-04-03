@@ -1,0 +1,378 @@
+*{
+  scroll-behavior: smooth ;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: sans-serif;
+  list-style: none;
+}
+  
+:root{
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(0, 0, 0);
+}
+  
+.darktheme{
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(255, 255, 255);
+}
+
+nav {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  justify-content: space-between;
+  position: absolute;
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur( 20px );
+}
+  
+ul{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+li{
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3vw;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: ease .3s;
+}
+
+li:hover{
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+#logo{
+  height: 40%;
+  width: 12%;
+  min-width: 120px;
+  min-height: 30px;
+  margin-left: 5%;
+}
+
+#login{
+  width: 130px;
+  height: 35px;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  color: var(--primary-color);
+  transition: ease .3s;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-right: 5%;
+}
+
+.mob{
+  display: none;
+}
+
+#login:hover{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+}
+
+#btn-mobile{
+  display: none;
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  width: 60px;
+  height: 25px;
+  background: transparent;
+  display: block;
+  border-radius: 100px;
+  margin: 0 0 0 5px;
+  border: 2px solid var(--secondary-color);
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background: var(--secondary-color);
+  border-radius: 90px;
+  transition: 0.3s;
+}   
+
+input:checked + label {
+  background: transparent;
+}
+
+input:checked + label:after {
+  left: calc(100% - 4px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 10px;
+}
+
+#page{
+  background-image: url(./images/fundo_lighttheme.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#page-two{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  color: var(--secondary-color);
+}
+
+.camisa{
+  width: 400px;
+  height: 500px;
+}
+
+#home{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title-home{
+  margin-left: 5%;
+  color: var(--secondary-color);
+}
+
+.fit{
+  width: 50%;
+  height: 100%;
+}
+
+button{
+  cursor: pointer;
+}
+
+#title-home{
+  font-size: 3.5vw;
+  line-height: 4vw;
+}
+
+#more{
+  min-width: 150px;
+  width: 35%;
+  height: 45px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 3px solid var(--secondary-color);
+  transition: ease .3s;
+  margin-top: 25px;
+}
+#more:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+footer{
+  width: 100%;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h6{
+  margin: 0 5% 0 5%;
+}
+
+#page9{
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.contato{
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 15px;;
+}
+
+.contato>span{
+  color: var(--secondary-color);
+}
+
+h5{
+  margin-bottom: 20px;
+  color: #cca352;
+}
+
+.fa-facebook, .fa-instagram, .fa-whatsapp, .fa-whatsapp, .fa-twitter{
+  transition: ease .3s;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+.fa-instagram:hover {
+  color: #cca352;
+}
+
+.fa-facebook:hover {
+  color: #cca352;
+}
+
+.fa-twitter:hover {
+  color: #cca352;
+}
+
+.fa-whatsapp:hover {
+  color: #cca352;
+}
+
+#top{
+  background-color: #cca352;
+  width: 35px;
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  font-weight: bold;
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  padding-bottom: 5px;
+  transition: ease .5s;
+}
+
+@media (max-width: 990px) {
+  #title-home{
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .fit{
+    display: none;
+  }
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    transition: 0.6s;
+    height: 0px;
+    overflow-y: hidden;
+    margin-top: 10vh;
+    background-color: var(--primary-color, 0.9);
+  }
+  nav{
+    justify-content: space-between;
+  }
+
+  #nav.active #menu {
+    height: 350px;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu li {
+    padding: 1rem 0;
+    margin: 0 5%;
+    border-bottom: 2px solid var(--secondary-color);
+    font-size: 15px;
+  }
+  #login, label, #logo{
+    margin: 0.3rem 5%;
+  }
+
+  .desk{
+    display: none;
+  }
+
+  .mob{
+    display: block;
+  }
+
+  #btn-mobile {
+    display: flex;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    margin-right: 5%;
+  }
+  #hamburger {
+    border-top: 2px solid var(--secondary-color);
+    width: 30px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: var(--secondary-color);
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+@media (max-width: 320px){
+    #logo{
+        width: 100px;
+        height: 20px;
+    }
+}
+
+

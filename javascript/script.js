@@ -61,6 +61,9 @@ links.forEach((link) => {
         {
             window.location = `${url}.html?tema=${themes}`
         }
+        else if(url == 'DESCOBRIR MAIS'){
+            window.location = `planos.html?tema=${themes}`
+        }
         else
         {
             window.open(`${url}.html?tema=${themes}`)
@@ -70,8 +73,7 @@ links.forEach((link) => {
 
 //animação
 
-if(supino != null){
-    console.log(supino.value)
+
     var interval = window.setInterval(function(){
         if(supino.value == undefined){
             supino.setAttribute('src', `./images/supino2_${themes}.png`)
@@ -81,6 +83,4 @@ if(supino != null){
             supino.setAttribute('src', `./images/supino_${themes}.png`)
         }
     }, 700);
-    
 
-}

@@ -4,44 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <title>LOGIN</title>
 </head>
 <body>
-    
-    <nav>
-        <img id="logo" src="" alt="">
-        <ul>
+<header>
+    <nav id="nav">
+        <img src="./images/logo_lighttheme.png" id="logo" alt="">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
             <li class="link">HOME</li>
             <li class="link">IMC</li>
             <li class="link">PLANOS</li>
             <li class="link">SOBRE</li>
             <li class="link">CONTATO</li>
-            <button id="toggle-theme">Light Theme</button>
+            <input type="checkbox" id="switch" /><label for="switch"></label>
+            <button id="login" class="mob link">LOGIN</button>
         </ul>
-        <button id="login">LOGIN</button>
+        <button id="login" class="desk link">LOGIN</button>
     </nav>
-    <section id="page" class="login_page">
-        <img id="supino" src="./images/supino_lighttheme.png" alt="supino">
-        <form action="">
-            <span>
-                <h1>LOGIN</h1>
-                <p>Seja bem vindo!</p>
-            </span>
-            <span>
-                <label for="email">Email</label>
-                <input type="email">
-            </span>
-            <span>
-                <label for="senha">Senha</label>
-                <input type="password">
-            </span>
-             
-            <button>LOGIN</button>
-        </form>
-    </section>
+</header>
+<section id="page">
+  <div id="page-login">
+    <div id="animation">
+        <img id="supino" src="./images/supino_darktheme.png" alt="">
+    </div>
+    <form action="">
+        <h1>LOGIN</h1>
+        <h5>Seja bem vindo!</h5>
+        <span>Email</span>
+        <input type="email">
+        <span>Senha</span>
+        <input type="password">
+        <button id="btn-login">LOGIN</button>
+    </form>
+  </div>
+</section>
+<footer>
+  <h1>Atlas Academy</h1>
+  <ul>
+    <li class="link">HOME</li>
+    <li class="link">IMC</li>
+    <li class="link">PLANOS</li>
+    <li class="link">SOBRE</li>
+    <li class="link">CONTATO</li>
+  </ul>
+  <h4 id="copy">&copy;2023 Todos direitos reservados</h4>
+</footer>
+<script src="./javascript/nav.js"></script>
+<script src="./javascript/animation.js"></script>
 </body>
-<script src="./javascript/script.js">
-    
-</script>
 </html>
