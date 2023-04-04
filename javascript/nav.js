@@ -1,12 +1,15 @@
 const btnMobile = document.getElementById('btn-mobile');
 var logo = document.getElementById('logo');
+var logofooter = document.getElementById('logo-footer');
 var fundo = document.getElementById('page');
 var links = document.querySelectorAll('.link');
 var toggleTheme = document.getElementById('switch');
 
 var themes = 'lighttheme';
-logo.setAttribute('src', `./images/logo_lighttheme.png`);
-fundo.style.backgroundImage = `url(./images/fundo_lighttheme.jpg)`;
+logo.setAttribute('src', `../images/logo_lighttheme.png`);
+logofooter.setAttribute('src', `../images/logo_lighttheme.png`);
+fundo.style.backgroundImage = `url(../images/fundo_lighttheme.jpg)`;
+
 
 // método menu mobile
 function toggleMenu(event) {
@@ -34,13 +37,16 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 toggleTheme.onclick = function(){
     if(themes == 'darktheme'){
         themes = 'lighttheme'
-        logo.setAttribute('src', `./images/logo_${themes}.png`)
-        fundo.style.backgroundImage = `url(./images/fundo_${themes}.jpg)`
+        logo.setAttribute('src', `../images/logo_${themes}.png`)
+        logofooter.setAttribute('src', `../images/logo_${themes}.png`)
+        fundo.style.backgroundImage = `url(../images/fundo_${themes}.jpg)`
+
     }
     else{
         themes = 'darktheme'
-        logo.setAttribute('src', `./images/logo_${themes}.png`)
-        fundo.style.backgroundImage = `url(./images/fundo_${themes}.jpg)`
+        logo.setAttribute('src', `../images/logo_${themes}.png`)
+        logofooter.setAttribute('src', `../images/logo_${themes}.png`)
+        fundo.style.backgroundImage = `url(../images/fundo_${themes}.jpg)`
     }
     toggleTheme.innerHTML = themes
     document.body.classList.toggle('darktheme')
@@ -75,9 +81,11 @@ if(tema != null)
     if(tema == 'darktheme')
     {
         document.body.classList.toggle('darktheme')
-        logo.setAttribute('src', `./images/logo_${tema}.png`)
-        fundo.style.backgroundImage = `url(./images/fundo_${tema}.jpg)`
+        logo.setAttribute('src', `../images/logo_${tema}.png`)
+        logofooter.setAttribute('src', `../images/logo_${tema}.png`)
+        fundo.style.backgroundImage = `url(../images/fundo_${tema}.jpg)`
         console.log('certo')
         themes = tema
     }
 }
+

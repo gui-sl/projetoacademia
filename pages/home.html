@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>HOME</title>
+</head>
+<body>
+  
+<header>
+    <nav id="nav">
+        <img src="../images/logo_lighttheme.png" id="logo" alt="">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
+            <li class="link">HOME</li>
+            <li class="link">IMC</li>
+            <li class="link">SERVIÇOS</li>
+            <li class="link">SOBRE</li>
+            <li class="link">CONTATO</li>
+            <input type="checkbox" id="switch" /><label for="switch"></label>
+            <button id="login" class="mob link">LOGIN</button>
+        </ul>
+        <button id="login" class="desk link">LOGIN</button>
+    </nav>
+</header>
+<section id="page">
+  <div id="home">
+    <h1 id="title-home">
+      ATLAS ACADEMY, <br> A ACADEMIA <br> COM PLANOS <br> DO SEU TAMANHO. <br>
+      <button id="more" class="link">DESCOBRIR MAIS</button>
+    </h1>
+    <img src="../images/fit.png" class="fit" alt="fit">
+  </div>
+</section>
+
+<section class="services">
+  <p class="container-title">Serviços</p>
+
+  <div class="gradient-cards">
+
+    <div class="card">
+      <div class="container-card bg-yellow-box">
+        <div class="box-icon yellow">
+          <img src="../images/icons8-haltere-60.png" alt="">
+        </div>
+        <p class="card-title">Área de musculação</p>
+        <p class="card-description">Áreas de musculação e cárdiocom equipamentos de alto padrão</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container-card bg-yellow-box">
+        <div class="box-icon yellow">
+          <img src="../images/icons8-treinador-pessoal-50.png" alt="">
+        </div>
+        <p class="card-title">Instrutor</p>
+        
+        <p class="card-description">Instrutor é um tipo de educador focado apenas em repassar determinado conteúdo.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container-card bg-green-box">
+        <div class="box-icon green">
+          <img src="../images/icons8-fisioterapia-60.png" alt="">
+        </div>
+        <p class="card-title">Fisioterapeuta</p>
+        <p class="card-description">O fisioterapeuta é um profissional que se ocupa da recuperação de nossos movimentos através de massagens.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container-card bg-green-box">
+        <div class="box-icon green">
+          <img src="../images/icons8-saúde-do-coração-60.png" alt="">
+        </div>
+        <p class="card-title">Nutricionista</p>
+        <p class="card-description">O Nutricionista é o profissional de saúde capacitado para atuar na prevenção e recuperação da saúde humana.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container-card bg-red-box">
+        <div class="box-icon red">
+          <img src="../images/icons8-boxing-gloves-60.png" alt="">
+        </div>
+        <p class="card-title">Boxe</p>
+        <p class="card-description">O boxe é tradicionalmente um tipo de luta que tem como principal característica o combate “homem a homem”.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container-card bg-red-box">
+        <div class="box-icon red">
+          <img src="../images/icons8-quimono-60.png" alt="">
+        </div>
+        <p class="card-title">Karate</p>
+        <p class="card-description">O Karatê é em uma arte marcial japonesa e um método de ataque e defesa pessoal.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container-card bg-blue-box">
+        <div class="box-icon blue">
+          <img src="../images/icons8-crossfit-60.png" alt="">
+        </div>
+        <p class="card-title">Crossfit</p>
+        <p class="card-description">O crossfit tem a intenção de desenvolver altos níveis de condicionamento físico, contendo exercícios variados.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container-card bg-blue-box">
+        <div class="box-icon blue">
+          <img src="../images/icons8-nadar-60.png" alt="">
+        </div>
+        <p class="card-title">Natação</p>
+        <p class="card-description">A natação é uma prática corporal realizada na água por meio de quatro estilos de nado: crawl, peito, costas e borboleta. </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="planos">
+  <p class="container-title">Planos</p>
+  <div class="gradient-plans">
+    <div class="card">
+      <div class="container-card bg-silver-box">
+        <div class="box-icon silver">
+          <h1>BÁSICO</h1>
+        </div>
+        <p class="card-title">Beneficios</p>
+        <div id="beneficios">
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Área de musculação</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Instrutor</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Fisioterapeuta</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Nutricionista</h4>
+          <h4><i class="fa fa-ban" aria-hidden="true"></i> Boxe</h4>
+          <h4><i class="fa fa-ban" aria-hidden="true"></i> Karate</h4>
+          <h4><i class="fa fa-ban" aria-hidden="true"></i> Crossfit</h4>
+          <h4><i class="fa fa-ban" aria-hidden="true"></i> Natação</h4>
+        </div>
+        <h1 class="silver">R$ 119,99 <small>/mês</small> </h1>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container-card bg-plat-box">
+        <div class="box-icon plat">
+          <h1>ESSENCIAL</h1>
+        </div>
+        <p class="card-title">Beneficios</p>
+        <div id="beneficios">
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Área de musculação</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Instrutor</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Fisioterapeuta</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Nutricionista</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Boxe</h4>
+          <h4><i class="fa fa-ban" aria-hidden="true"></i> Karate</h4>
+          <h4><i class="fa fa-ban" aria-hidden="true"></i> Crossfit</h4>
+          <h4><i class="fa fa-ban" aria-hidden="true"></i> Natação</h4>
+        </div>
+        <h1 class="plat">R$ 119,99 <small>/mês</small> </h1>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container-card bg-gold-box">
+        <div class="box-icon gold">
+          <h1>EXTRA</h1>
+        </div>
+        <p class="card-title">Beneficios</p>
+        <div id="beneficios">
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Área de musculação</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Instrutor</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Fisioterapeuta</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Nutricionista</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Boxe</h4>
+          <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Karate</h4>
+          <h4><i class="fa fa-ban" aria-hidden="true"></i> Crossfit</h4>
+          <h4><i class="fa fa-ban" aria-hidden="true"></i> Natação</h4>
+        </div>
+        <h1 class="gold">R$ 119,99 <small>/mês</small> </h1>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container-card bg-diamond-box">
+        <div class="box-icon diamond">
+            <h1>PREMIUM</h1>
+        </div>
+          <p class="card-title">Beneficios</p>
+          <div id="beneficios">
+            <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Área de musculação</h4>
+            <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Instrutor</h4>
+            <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Fisioterapeuta</h4>
+            <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Nutricionista</h4>
+            <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Boxe</h4>
+            <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Karate</h4>
+            <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Crossfit</h4>
+            <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Natação</h4>
+          </div>
+          <h1 class="diamond">R$ 119,99 <small>/mês</small> </h1>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="contact">
+    <img src="../images/logo_lighttheme.png" id="logo-footer" alt="">
+  </div>
+  <div class="contact">
+    <h2>Contato</h2>
+    <h3>Email <br> atlasacademy@gmail.com</h3>
+    <h3>Telefone <br> 11 4561-2223</h3>  
+    <h3>Whatsapp <br> 11 988193371</h3>  
+  </div>
+  <div class="contact">
+    <h2>Midias sociais</h2>
+     <h3><i class="fa fa-instagram"></i>Instagram</h3>
+     <h3><i class="fa fa-facebook"></i>Facebook</h3>  
+     <h3><i class="fa fa-twitter"></i>Twitter</h3>  
+     <h3><i class="fa fa-whatsapp"></i>Whatsapp</h3>  
+  </div>
+  <div class="contact">
+    <h2>Links</h2>
+    <li class="link">HOME</li>
+    <li class="link">IMC</li>
+    <li class="link">SERVIÇOS</li>
+    <li class="link">SOBRE</li>
+    <li class="link">CONTATO</li>
+  </div>
+</footer>
+
+<script src="../javascript/nav.js"></script>
+</body>
+</html>
