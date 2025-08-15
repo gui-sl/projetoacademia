@@ -1,86 +1,44 @@
-// declarando elementos HTML
-var links = document.querySelectorAll('.link');
-var toggleTheme = document.getElementById('toggle-theme');
-var logo = document.getElementById('logo');
-var fundo = document.getElementById('page');
-var supino = document.getElementById('supino');
-var themes = 'lighttheme';
-logo.setAttribute('src', `./images/logo_lighttheme.png`);
-fundo.style.backgroundImage = `url(./images/fundo_lighttheme.jpg)`;
+const links = document.querySelectorAll('.link');
+const toggleTheme = document.getElementById('toggle-theme');
+const logo = document.getElementById('logo');
+const fundo = document.getElementById('page');
+const supino = document.getElementById('supino')
+// === Estado inicial ===
+let themes = 'lighttheme';
+updateTheme(themes);
 
-//função para alterar o tema
-toggleTheme.onclick = function(){
-    
-    if(themes == 'darktheme'){
-        themes = 'lighttheme'
-        logo.setAttribute('src', `./images/logo_${themes}.png`)
-        fundo.style.backgroundImage = `url(./images/fundo_${themes}.jpg)`
-        if(supino != null){
-            supino.setAttribute('src', `./images/supino_${themes}.png`) 
-        }
-        
-    }
-    else{
-        themes = 'darktheme'
-        logo.setAttribute('src', `./images/logo_${themes}.png`)
-        fundo.style.backgroundImage = `url(./images/fundo_${themes}.jpg)`
-        if(supino != null){
-            supino.setAttribute('src', `./images/supino_${themes}.png`) 
-        }
-    }
-    toggleTheme.innerHTML = themes
-    document.body.classList.toggle('darktheme')
-    console.log(themes)
+// === Funções utilitárias ===
+function updateTheme(theme) {
+    logo.src = `./images/logo_${theme}.png`;
+    fundo.style.backgroundImage = `url(./images/fundo_${theme}.jpg)`;
+    if (supino) supino.src = `./images/supino_${theme}.png`;
 }
 
-//pegando parametros passados para a URL
-const urlParams = new URLSearchParams(window.location.search);
-const tema = urlParams.get("tema") // tema
-console.log(tema)
-
-
-if(tema != null)
-{
-    if(tema == 'darktheme')
-    {
-        document.body.classList.toggle('darktheme')
-        logo.setAttribute('src', `./images/logo_${tema}.png`)
-        fundo.style.backgroundImage = `url(./images/fundo_${tema}.jpg)`
-        
-        console.log('certo')
-        themes = tema
-    }
+function toggleDarkMode() {
+    themes = (themes === 'darktheme') ? 'lighttheme' : 'darktheme';
+    updateTheme(themes);
+    toggleTheme.textContent = themes;
+    document.body.classList.toggle('darktheme');
+    console.log(themes);
 }
 
-//navegação enviando parametros para as paginas
-links.forEach((link) => {
-    link.addEventListener('click', (e) => {
-        url = e.target.innerHTML;
-        console.log(url)
-        if(url == 'HOME')
-        {
-            window.location = `${url}.html?tema=${themes}`
-        }
-        else if(url == 'DESCOBRIR MAIS'){
-            window.location = `planos.html?tema=${themes}`
-        }
-        else
-        {
-            window.open(`${url}.html?tema=${themes}`)
-        }        
-    })
-})
+// === Troca de tema ao clicar no botão ===
+toggleTheme.addEventListener('click', toggleDarkMode);
 
-//animação
+// === Tema vindo da URL ===
+const tema = new URLSearchParams(window.location.search).get("tema");
+if (tema) {
+    themes = tema;
+    updateTheme(tema);
+    if (tema === 'darktheme') document.body.classList.add('darktheme');
+}
 
-
-    var interval = window.setInterval(function(){
-        if(supino.value == undefined){
-            supino.setAttribute('src', `./images/supino2_${themes}.png`)
-            supino.value = 1
-        }else{
-            supino.value = undefined
-            supino.setAttribute('src', `./images/supino_${themes}.png`)
-        }
-    }, 700);
-
+// === Navegação com preservação do tema ===
+links.forEach(link => {
+    link.addEventListener('click', e => {
+        const url = e.target.innerText.trim();
+        const destino = (url === 'DESCOBRIR MAIS') ? 'planos' : url;
+        const linkFinal = `${destino}.html?tema=${themes}`;
+        (url === 'HOME') ? window.location = linkFinal : window.open(linkFinal);
+    });
+});

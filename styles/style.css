@@ -236,7 +236,6 @@ button{
   #nav.active #menu {
     height: 350px;
     visibility: visible;
-    overflow-y: auto;
   }
   #menu li {
     padding: 1rem 0;
